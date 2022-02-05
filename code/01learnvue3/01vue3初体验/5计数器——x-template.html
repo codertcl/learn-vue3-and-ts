@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--模板内容渲染到这里-->
+<div id="app"></div>
+<script src="js/vue.js"></script>
+<!--&lt;!&ndash;写法1&ndash;&gt;-->
+<!--<script type="x-template" id="why">-->
+<!--    <div>-->
+<!--        <h1>{{count}}</h1>-->
+<!--        <button @click="add">+2</button>-->
+<!--        <button @click="sub">-2</button>-->
+<!--        <button @click="count++">+1</button>-->
+<!--        <button @click="count&#45;&#45;"> -1</button>-->
+<!--    </div>-->
+<!--</script>-->
+
+<!--写法2-->
+<!--<template id="why">-->
+<!--    <div>-->
+<!--        <h1>{{count}}</h1>-->
+<!--        <button @click="add">+2</button>-->
+<!--        <button @click="sub">-2</button>-->
+<!--        <button @click="count++">+1</button>-->
+<!--        <button @click="count&#45;&#45;"> -1</button>-->
+<!--    </div>-->
+<!--</template>-->
+
+<!--写法3 使用div等块级元素也可以-->
+<div id="why">
+    <!--非app对应标签 所以不被vue处理 下面的函数可以正常调用-->
+    <h1>{{count}}</h1>
+    <button @click="add">+2</button>
+    <button @click="sub">-2</button>
+    <button @click="count++">+1</button>
+    <button @click="count--"> -1</button>
+</div>
+
+<script>
+    Vue.createApp({
+        //执行queryselector('#why)
+        template: '#why',
+        data() {
+            return {
+                count: 0
+            }
+        },
+        methods: {
+            add() {
+                this.count += 2
+            },
+            sub() {
+                this.count -= 2
+            },
+        }
+    }).mount('#app')
+</script>
+</body>
+</html>

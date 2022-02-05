@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<template id="my-app">
+    <h2 v-cloak>{{message}}</h2>
+    <h2>{{message}}</h2>
+</template>
+<script src="./js/vue.js"></script>
+<script>
+    const app = {
+        template: '#my-app',
+        data() {
+            return {
+                message: '冰冰',
+            }
+        },
+        methods: {}
+    }
+    Vue.createApp(app).mount('#app')
+</script>
+</body>
+</html>

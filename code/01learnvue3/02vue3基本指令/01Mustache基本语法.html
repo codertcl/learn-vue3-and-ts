@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app"></div>
+<template id="my-app">
+    <h2>{{message}}</h2>
+    <!--  冰冰好你  -->
+    <!--  调用函数  -->
+    <h2>{{getReverseMess()}}</h2>
+    <!--  对字符串进行处理  -->
+    <h2>{{message.split('').reverse().join('')}}</h2>
+    <!--  三元表达式  -->
+    <h2>{{isTrue?'true':'false'}}</h2>
+    <h2>{{!isTrue?'true':'false'}}</h2>
+    <button @click="isTrue=!isTrue">切换</button>
+
+
+    <!-- 错误用法 不能写语句 -->
+<!--    <h4>{{var name='冰冰'}}</h4>-->
+<!--    <h4>{{if(isTrue) isTrue=false}}</h4>-->
+</template>
+<script src="./js/vue.js"></script>
+<script>
+    const app = {
+        template: '#my-app',
+        data() {
+            return {
+                message: '你好冰冰',
+                isTrue: true,
+            }
+        },
+        methods: {
+            getReverseMess() {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    }
+    Vue.createApp(app).mount('#app')
+</script>
+</body>
+</html>
