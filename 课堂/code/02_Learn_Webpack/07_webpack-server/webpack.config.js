@@ -17,20 +17,20 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     hot: true,
-    host: "0.0.0.0",
-    port: 7777,
+    // host: "0.0.0.0",
+    // port: 7777,
     open: true,
-    // compress: true,
-    proxy: {
-      "/api": {
-        target: "http://localhost:8888",
-        pathRewrite: {
-          "^/api": ""
-        },
-        secure: false,
-        changeOrigin: true
-      }
-    }
+    // // compress: true,
+    // proxy: {
+    //   "/api": {
+    //     target: "http://localhost:8888",
+    //     pathRewrite: {
+    //       "^/api": ""
+    //     },
+    //     secure: false,
+    //     changeOrigin: true
+    //   }
+    // }
   },
   resolve: {
     extensions: [".js", ".json", ".mjs", ".vue", ".ts", ".jsx", ".tsx"],

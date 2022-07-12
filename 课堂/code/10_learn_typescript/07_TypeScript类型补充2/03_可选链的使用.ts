@@ -36,9 +36,3 @@ console.log(info.friend?.girlFriend?.name)
 //     console.log(info.friend.age)
 //   }
 // }
-
-
-
-
-
-

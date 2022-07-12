@@ -20,7 +20,7 @@ console.log(priceFormat());
 const app = createApp(App);
 app.mount("#app");
 
-console.log("123");
+console.log("4eee");
 console.log("你好啊");
 
 axios.get("/api/moment").then(res => {

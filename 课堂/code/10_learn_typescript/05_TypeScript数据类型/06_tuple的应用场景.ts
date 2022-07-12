@@ -13,6 +13,8 @@ function useState(state: any) {
 
 const [counter, setCounter] = useState(10);
 setCounter(1000)
+console.log(counter);
+
 
 const [title, setTitle] = useState("abc")
 
