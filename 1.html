@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运行阶段</title>
+    <script src="./js/vue.js"></script>
+
+<body>
+<div id="app">
+    <p>{{msg}}</p>
+</div>
+<script>const app = new Vue({
+    el: '#app',
+    data: {
+        msg: 1,
+    },
+
+//在数据修改之后被调用 但调用时 界面数据还未更新 调用完成后界面结果才更新
+    beforeUpdate: function () {
+        console.log('beforeUpdate---');
+        console.log(this.msg)//2
+        console.log(document.querySelector('p').innerHTML);//1界面上数据还未更新 未渲染更新
+        console.log(document.querySelector('p').innerText);//1 界面上数据还未更新 未渲染更新
+    },
+
+//数据和屏幕上数据修改渲染完成后调用updated方法
+    updated: function () {
+        console.log('updated---');
+        console.log(this.msg);//2
+        console.log(document.querySelector('p').innerHTML);//2数据已经更新
+        console.log(document.querySelector('p').innerText);//2数据已经更新
+    },
+});
+</script>
+
+</body>
+</html>
