@@ -1,7 +1,0 @@
-.title {
-    /*后两位表示不透明度 部分浏览器不支持该格式*/
-    color: #12345678;
-    font-size: 30px;
-    font-weight: bolder;
-    user-select: none;
-}

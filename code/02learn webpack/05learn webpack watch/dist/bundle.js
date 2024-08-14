@@ -1,1 +1,0 @@
-(()=>{var o={466:o=>{o.exports={priceForamt:function(){return"999"}}}},r={};function e(t){var n=r[t];if(void 0!==n)return n.exports;var s=r[t]={exports:{}};return o[t](s,s.exports,e),s.exports}(()=>{"use strict";function o(o,r){return o+r}const{priceForamt:r}=e(466);console.log(o(11,12)),console.log(o(1,20)),console.log(o(1,20)),console.log(o(1,20)),console.log(r())})()})();
